@@ -1,0 +1,98 @@
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+  <!-- lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static "css/responsive.css" %}" rel="stylesheet" />
+  <link rel="shortcut icon" href="{% static "images/BL.png" %}" type="">
+
+<!-- navbar.html -->
+
+<header class="header_section">
+    <div class="container">
+        {% comment %} {% if request.path == '/' %}
+        <div class="bclogo">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span>
+                    <img style=" border-radius:10px;" width="80%" height="80%" src="{% static "images/B1.png" %}" alt=" Bilva Creations">
+                </span>
+            </a>        
+        </div>
+        {% else %}
+        <div class="bclogo">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span>
+                    <img style=" border-radius:10px;" width="100px" height="100px" src="{% static "images/BL.png" %}" alt=" Bilva Creations">
+                </span>
+            </a>        
+        </div>
+        {% endif %} {% endcomment %}
+<nav class="navbar navbar-expand-lg custom_nav-container">
+    
+    {% if request.path == '/' %}
+    <div class="bclogo">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <span>
+                <img style=" border-radius:10px;" width="70%" height="70%" src="{% static "images/B1.png" %}" alt=" Bilva Creations">
+            </span>
+        </a>        
+    </div>
+    {% else %}
+    <div class="bclogo">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <span>
+                <img style=" border-radius:10px;" width="100px" height="100px" src="{% static "images/BL.png" %}" alt=" Bilva Creations">
+            </span>
+        </a>        
+    </div>
+    {% endif %}
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+           {% comment %}   <li class="nav-item {% if request.path == '/' %}activelink{% endif %}">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li> 
+             <li class="nav-item {% if request.path == '/about/' %}activelink{% endif %}">
+                <a class="nav-link" href="{% url 'about' %}"> About</a>
+            </li> 
+             <li class="nav-item {% if request.path == '/services/' %}activelink{% endif %}">
+                <a class="nav-link" href="{% url 'services' %}">Services</a>
+            </li> 
+            <li class="nav-item {% if request.path == '/gallery/' %}activelink{% endif %}">
+                <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+            </li> 
+            <li class="nav-item {% if request.path == '/enquire-us/' %}activelink{% endif %}">
+                <a class="nav-link" href="{% url 'contact' %}">Enquire Us</a>
+            </li> {% endcomment %}
+             <li class="nav-item {% if request.path == '/enquire-us/' %}activelink{% endif %}">
+                <a class="nav-link" href="#infosec">Contact Us</a>
+            </li> 
+            {% comment %} {% if request.user.is_superuser %}
+            <li class="nav-item {% if request.path == '/adminpage/' %}activelink{% endif %}">
+                <a class="nav-link" href="{% url 'adminpage' %}">Admin</a>
+            </li>
+            {% endif %} {% endcomment %}
+        </ul>
+    </div>
+</nav>
+
+ <div class="loader-box">
+    <div id="loader"></div>
+  </div> 
+</header>
+

@@ -1,0 +1,121 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+  <!-- lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet" />
+  <link rel="shortcut icon" href="{% static "images/BL.png" %}" type="">
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static "css/responsive.css" %}" rel="stylesheet" />
+
+  <!-- footer.html -->
+
+<footer id="footer">
+
+  <div id="mobilePopup" class="modals" style="display: none;">
+    <div class="modals-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <div class="heading_container">
+             <h2> Feedback </h2>
+          </div>
+        <div class="popup-content">
+            <form id="popupForm" action="">
+                <div class="form-group">
+                    <label for="id_name">Your Name:</label>
+                    <input type="text" id="id_name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_phone">Phone:</label>
+                    <input type="tel" id="id_phone" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_message">Message:</label>
+                    <textarea id="id_message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+
+  {% comment %} <div class="fixed-icons">
+    <a href="https://wa.me/919798106423" target="_blank"> <i class="fa-brands fa-square-whatsapp whatsapp-icon fa-beat fa-2xl" style=" font-size:50px; color: #208245;"></i></a>
+    <a href="#"> <i class="fa-solid fa-comment fa-beat fa-2xl" style=" display: block; margin-top:50px; font-size:50px; color: #00BFFF;"onclick="showPopup()"></i></a> 
+      
+</div> {% endcomment %}
+
+    <section class="info_section " id="infosec">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="info_contact_container ">
+                <h5>
+                  Get in touch
+                </h5>
+                <div class="info_contact">
+                  <div class="contact_link_box">
+                    <a href="">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        <br>Bangalore
+                      </span>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <span>
+                       <br> +91 96866 44544
+                      </span>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <span>
+                       <br> contact@bilvacreations.in
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info_social_container">
+                <h5>
+                  Follow Us
+                </h5>
+                <div class="info_social">
+                  <a href="">
+                    <i class="fa fa-facebook-f"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-x-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </section>
+
+    <section class="footer_section">
+        <div class="container">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By Bilva Creations
+            </p>
+        </div>
+    </section>
+</footer>

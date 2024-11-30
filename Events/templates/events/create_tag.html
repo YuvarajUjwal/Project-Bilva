@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static "images/BL.png" %}" type="">
+    <title>Upload Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:linear-gradient(to right,rgba(243, 146, 12, 0.7) 10%, #0c1313);
+            margin: 50px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            /* border-radius: 100%; */
+          }
+          
+          ::-webkit-scrollbar-track {
+            background: #0c1313; 
+            border-radius: 1px;
+          }
+           
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #f3920c; 
+            border-radius: 10px;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #f1f2f3; 
+            border-radius: 10px;
+          }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin-top: 20px;
+        }
+
+        .heading_container {
+            margin:20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+          }
+          
+          .heading_container h2 {
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+          }
+          
+          .heading_container h2::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #f3920c;
+            border-radius: 10px;
+          }
+          
+          .heading_container p {
+            margin-top: 10px;
+            margin-bottom: 0;
+          }
+
+          .heading_container.heading_center {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            text-align: center;
+          }
+          
+          .heading_container.heading_center h2::before {
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+          }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .form-group-btn button {
+            border: none;
+            width: auto;
+            text-align: center;
+            display: inline-block;
+            margin:10px;
+            padding: 12px 20px;
+            background-color: #f3920c;
+            color: #ffffff;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .form-group-btn button:hover {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-box-shadow: 1px 3px 5px rgba(12, 19, 19, 0.15);
+            box-shadow: 1px 3px 5px rgba(12, 19, 19, 0.15);
+        }
+
+        .btn{
+            border: none;
+            width: auto;
+            text-align: center;
+            display: inline-block;
+            margin:10px;
+            padding: 12px 20px;
+            background-color: #f3920c;
+            color: #ffffff;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            text-decoration:none;
+        }
+
+        .btn2{
+            border: none;
+            width: auto;
+            text-align: center;
+            display: inline-block;
+            margin:10px;
+            padding: 12px 20px;
+            background-color: #0c1313;
+            color: #ffffff;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            text-decoration:none;
+        }
+
+        .logout-button {
+            background-color: #dc3545;
+        }
+        .data{
+
+            background-color: #28a745;
+        }
+        .home{
+
+            background-color: #80bfff;
+        }
+
+        .btn:hover,.btn2:hover{
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-box-shadow: 1px 3px 5px rgba(12, 19, 19, 0.15);
+            box-shadow: 1px 3px 5px rgba(12, 19, 19, 0.15);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            text-align:center;
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="{% url 'home' %}"><button class="home btn">Home</button><a>
+    <a href="{% url 'adminpage' %}"><button class="data btn">Admin Page</button><a>
+    <a href="{% url 'logout' %}"><button class="logout-button btn">Logout</button><a>
+    <div class="heading_container">
+        <h2> Create Category </h2>
+     </div>
+    
+    <form method='POST'> 
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_category">Category:</label>
+            <input type="text" id="id_category" name="category">
+        </div>
+        
+        <div class="form-group-btn">
+            <button type="submit">Create</button>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tag in tags %}
+        <tr>
+            <td>{{tag}}</td>
+            <td><a class="btn" href="{% url 'update_tag' tag.id %}">Update Name</a></td>
+            <td><a class="btn2" href="{% url 'delete_content' tag.id  %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>

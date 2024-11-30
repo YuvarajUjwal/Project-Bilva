@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static "images/BL.png" %}" type="">
+
+  <title> Bilva Creations</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+  <!-- lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- fonts style -->  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static "css/responsive.css" %}" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+  {% block content %}
+
+  <div class="hero_area">
+
+     <div class="hero_bg_box">
+      <img src="{% static "images/KONCEPT_LOGO.png" %}" alt="">
+    </div> 
+
+    <!-- header section strats -->
+    {% comment %} <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url "home" %}">
+            <span>
+              Bilva Creations
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "home" %}">Home </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url "about" %}"> About <span class="sr-only">(current)</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "services" %}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "gallery" %}">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "contact" %}">Enquire Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header> {% endcomment %}
+    {% include "events/navbar.html" %}
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="detail-box">
+            <div class="heading_container ">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              Quas ab excepturi fuga magni dolor libero id error dolore quo laborum. Facilis atque architecto fugiat laboriosam eaque tempore sed, facere dicta labore eum vero, porro in minima quae corrupti!
+              Earum, nam? Nostrum illum, maxime, eligendi soluta iste doloremque quae magnam necessitatibus ipsum, porro molestiae quasi quos totam facilis rem rerum sint voluptatibus. Molestias iure perspiciatis ipsam, esse nemo architecto?
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 img_container">
+          <div class="row">
+            <div class="col-6">
+              <img src="{% static "images/a1.jpg" %}" class="about_img1" alt="" />
+            </div>
+            <div class="col-6 px-0">
+              <img src="{% static "images/a2.jpg" %}" class="about_img2" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+  
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  {% comment %} <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By Bilva Creations
+      </p>
+    </div>
+  </section> {% endcomment %}
+
+  <!-- footer section -->
+  {% include "events/footer.html" %}
+  <!-- end footer section -->
+
+  
+  <!-- jQery -->
+  <script type="text/javascript" src="{% static "js/jquery-3.4.1.min.js" %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+  <!-- lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js  "></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{% static "js/custom.js" %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+</body>
+
+</html>
+{% endblock content %}

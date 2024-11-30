@@ -1,0 +1,335 @@
+@media (max-width: 1299px) {
+
+  .hero_area .hero_bg_box img {
+    -o-object-position: top center;
+    object-position: top center;
+  }
+
+
+}
+
+@media (max-width: 1120px) {}
+
+@media (max-width: 992px) {
+  .hero_area {
+    min-height: auto;
+  }
+
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    align-items: center;
+  }
+
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
+
+  .service_section .box {
+    flex-direction: column;
+  }
+
+  .service_section .row>div:nth-child(2n+1) .img-box {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .service_section .row>div:nth-child(2n) .img-box {
+    order: 1;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider_section .detail-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact_section .form_container {
+    margin-bottom: 45px;
+  }
+
+  .about_section .img_container {
+    padding-right: 30px;
+    margin-top: 45px;
+  }
+
+  .info_section .contact_link_box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info_section .info_social_container {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client_section .box {
+    flex-direction: column;
+  }
+
+  .client_section .box .detail-box {
+    background-color: #ffffff;
+    padding: 75px 20px 20px 25px;
+  }
+
+  .client_section .box .img-box {
+    margin: 0 0 -50px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+  }
+
+  .client_section .client_box {
+    flex-direction: column;
+  }
+
+  .client_section .client_box .img-box {
+    margin-right: 0;
+    margin-left: 35px;
+    margin-bottom: -45px;
+  }
+
+  .client_section .client_box .detail-box {
+    margin-top: 0;
+    padding: 75px 25px 30px 25px;
+  }
+
+  .client_section .client_box .detail-box::before {
+
+    content: "\f10d";
+    top: 70px;
+    left: 25px;
+
+  }
+}
+
+@media (max-width: 420px) {
+  .info_section .info_form form {
+    flex-direction: column;
+  }
+
+  .info_section .info_form form button {
+    transform: none;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 376px) {}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+
+
+
+/* Media Query for screens up to 767px */
+@media (max-width: 767px) {
+  .konceptimage {
+    max-width: 80%; /* Adjust the max-width for smaller screens */
+  }
+}
+
+/* Media Query for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .konceptimage {
+    max-width: 90%; /* Adjust the max-width for medium-sized screens */
+  }
+}
+
+/* Media Query for screens between 992px and 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .konceptimage {
+    max-width: 95%; /* Adjust the max-width for larger screens */
+  }
+}
+
+/* Media Query for screens between 1200px and 1299px */
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .konceptimage {
+    max-width: 90%; /* Adjust the max-width for larger screens */
+  }
+}
+
+/* Media Query for screens over 1300px */
+@media (min-width: 1300px) {
+  .konceptimage {
+    max-width: 1000px; /* Adjust the max-width for extra-large screens */
+  }
+}
+
+/* Media Query for screens between 420px and 479px */
+@media (min-width: 420px) and (max-width: 479px) {
+  .konceptimage {
+    max-width: 85%; /* Adjust the max-width for smaller screens */
+  }
+}
+
+/* Media Query for screens between 480px and 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .konceptimage {
+    max-width: 80%; /* Adjust the max-width for smaller screens */
+  }
+}
+
+
+
+/* Media query for screens up to 420px */
+@media (max-width: 420px) {
+  /* Custom CSS for screens up to 420px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 90%; /* Adjust the maximum width as needed */
+    margin: 10% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 10px; /* Adjust padding as needed */
+  }
+}
+
+/* Media query for screens between 421px and 480px */
+@media (min-width: 421px) and (max-width: 480px) {
+  /* Custom CSS for screens between 421px and 480px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 80%; /* Adjust the maximum width as needed */
+    margin: 7% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 15px; /* Adjust padding as needed */
+  }
+}
+
+/* Media query for screens between 481px and 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Custom CSS for screens between 481px and 768px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 70%; /* Adjust the maximum width as needed */
+    margin: 5% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+}
+
+/* Media query for screens between 769px and 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Custom CSS for screens between 769px and 992px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 60%; /* Adjust the maximum width as needed */
+    margin: 4% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 25px; /* Adjust padding as needed */
+  }
+}
+
+/* Media query for screens between 993px and 1200px */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Custom CSS for screens between 993px and 1200px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 50%; /* Adjust the maximum width as needed */
+    margin: 3% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 30px; /* Adjust padding as needed */
+  }
+}
+
+/* Media query for screens between 1201px and 1299px */
+@media (min-width: 1201px) and (max-width: 1299px) {
+  /* Custom CSS for screens between 1201px and 1299px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 40%; /* Adjust the maximum width as needed */
+    margin: 2% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 35px; /* Adjust padding as needed */
+  }
+}
+
+/* Media query for screens larger than 1300px */
+@media (min-width: 1300px) {
+  /* Custom CSS for screens larger than 1300px */
+  .ekko-lightbox .modal-dialog {
+    max-width: 30%; /* Adjust the maximum width as needed */
+    margin: 1% auto; /* Adjust the margin as needed */
+    left: auto;
+    right: auto;
+  }
+  .ekko-lightbox .modal-container {
+    padding: 0 40px; /* Adjust padding as needed */
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .card_container {
+    justify-content: center; /* Center the cards on smaller screens */
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  .card {
+    height: auto; /* Allow card height to adjust based on content */
+    margin: 20px; /* Reduce margin */
+  }
+
+  .card-text {
+    padding: 15px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .card_container {
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; /* Center align */
+  }
+
+  .card {
+    max-width: 90%; /* Reduce max width */
+    margin: 15px; /* Adjust margin */
+    height: auto;
+  }
+
+  .card a {
+    text-align: left; /* Align links to the left */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%; /* Use full width for smaller screens */
+    height: auto;
+  }
+
+  .card-text {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .card a {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  
+}
+
+
+
